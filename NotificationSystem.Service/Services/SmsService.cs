@@ -35,7 +35,7 @@ public sealed class SmsService : INotificationProvider
         {
             // Example for an exception caused by validation
             if (string.IsNullOrWhiteSpace(sendNotifDto.Destination) || sendNotifDto.Message is null)
-                throw new Exception() { };
+                throw new Exception("Validation Error!");
 
             // Calling relevant SMS API here
 
